@@ -44,16 +44,14 @@ int main() {
     printf("Moi chon gia tri muon tim 1 | 2\n");
     printf("1. So lon nhat\n");
     printf("2. So nho nhat\n");
-    scanf("%d", choice);
-    if (choice == 1) {
-        int ketqua;
-        ketqua = findMaxValue(p, sizeOfArray);
-        printf("So lon nhat la %d\n", ketqua);
-    }
-    if (choice == 2) {
-        int ketqua;
-        ketqua = findMinValue(p, sizeOfArray);
-        printf("So nho nhat la %d\n", ketqua);
+    scanf("%d", &choice);
+    switch (choice) {
+        case 1:
+            printf("So lon nhat la %d\n", findMaxValue(p, sizeOfArray));
+            break;
+        case 2:
+            printf("So nho nhat la %d\n", findMinValue(p, sizeOfArray));
+            break;
     }
     return 0;
 }
